@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HADRON MATCH-UP</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- Animated Background -->
+<!-- ========================= -->
+
+<div class="stars"></div>
+<div class="particles" id="particles"></div>
+
+<div class="container">
+
+<!-- ========================= -->
+<!-- Landing Page -->
+<!-- ========================= -->
+
+<section id="landingPage" class="page active">
+
+<div class="logo-placeholder">
+☢
+</div>
+
+<h1>HADRON MATCH-UP</h1>
+
+<h2>PHY587 Nuclear and Particle Physics</h2>
+
+<p class="intro">
+Test your knowledge of quark compositions, baryons,
+mesons and hadrons through an interactive learning game.
+</p>
+
+<div class="landing-buttons">
+
+<a href="https://forms.gle/kAgA5c1yZKfteceo6"
+target="_blank"
+class="btn secondary-btn">
+📝 Pre-Test Google Form
+</a>
+
+<button id="startBtn" class="btn">
+🚀 Start Game
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Registration -->
+<!-- ========================= -->
+
+<section id="registerPage" class="page">
+
+<h2>Player Registration</h2>
+
+<input
+type="text"
+id="playerName"
+placeholder="Enter your name"
+autocomplete="off">
+
+<button id="continueBtn" class="btn">
+Continue
+</button>
+
+</section>
+
+<!-- ========================= -->
+<!-- Quiz -->
+<!-- ========================= -->
+
+<section id="quizPage" class="page">
+
+<div class="quiz-header">
+
+<div class="player-info">
+Player:
+<span id="displayPlayer"></span>
+</div>
+
+<div class="score-info">
+Score:
+<span id="score">0</span>/20
+</div>
+
+</div>
+
+<div class="progress-container">
+
+<div class="progress-bar">
+<div id="progress"></div>
+</div>
+
+<div id="progressText">
+Question 1 of 20
+</div>
+
+</div>
+
+<div class="question-card">
+
+<h3 id="questionText">
+Question
+</h3>
+
+<div id="answerButtons" class="answers">
+
+</div>
+
+<div id="feedback" class="feedback">
+
+</div>
+
+<button id="nextBtn" class="btn next-btn">
+Next Question →
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Results -->
+<!-- ========================= -->
+
+<section id="resultPage" class="page">
+
+<h2>Game Completed!</h2>
+
+<div class="result-card">
+
+<p>
+<strong>Player:</strong>
+<span id="resultName"></span>
+</p>
+
+<p>
+<strong>Score:</strong>
+<span id="resultScore"></span>/20
+</p>
+
+<p>
+<strong>Percentage:</strong>
+<span id="resultPercent"></span>%
+</p>
+
+<p>
+<strong>Rank:</strong>
+<span id="resultRank"></span>
+</p>
+
+</div>
+
+<div class="result-buttons">
+
+<a href="https://forms.gle/Dj42CDiS9EsLgHui8"
+target="_blank"
+class="btn secondary-btn">
+📝 Complete Post-Test
+</a>
+
+<button id="leaderboardBtn" class="btn">
+🏆 Leaderboard
+</button>
+
+<button id="feedbackBtn" class="btn">
+⭐ Feedback
+</button>
+
+<button id="certificateBtn" class="btn">
+🎓 Certificate
+</button>
+
+<button id="playAgainBtn" class="btn">
+🔄 Play Again
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Leaderboard -->
+<!-- ========================= -->
+
+<section id="leaderboardPage" class="page">
+
+<h2>Top 10 Leaderboard</h2>
+
+<table class="leaderboard-table">
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>Name</th>
+<th>Score</th>
+<th>Rank</th>
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="leaderboardBody">
+
+</tbody>
+
+</table>
+
+<button id="backResultBtn" class="btn">
+← Back
+</button>
+
+</section>
+
+<!-- ========================= -->
+<!-- Feedback -->
+<!-- ========================= -->
+
+<section id="feedbackPage" class="page">
+
+<h2>Game Feedback</h2>
+
+<form id="feedbackForm">
+
+<div class="feedback-item">
+
+<label>
+Interface is attractive
+</label>
+
+<select required>
+
+<option value="">Select</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+
+</select>
+
+</div>
+
+<div class="feedback-item">
+
+<label>
+Questions are relevant
+</label>
+
+<select required>
+
+<option value="">Select</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+
+</select>
+
+</div>
+
+<div class="feedback-item">
+
+<label>
+Game improved understanding
+</label>
+
+<select required>
+
+<option value="">Select</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+
+</select>
+
+</div>
+
+<div class="feedback-item">
+
+<label>
+Would recommend to others
+</label>
+
+<select required>
+
+<option value="">Select</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+
+</select>
+
+</div>
+
+<button type="submit" class="btn">
+Submit Feedback
+</button>
+
+</form>
+
+</section>
+
+<!-- ========================= -->
+<!-- Certificate -->
+<!-- ========================= -->
+
+<section id="certificatePage" class="page">
+
+<div id="certificate" class="certificate">
+
+<h1>CERTIFICATE OF ACHIEVEMENT</h1>
+
+<h2>HADRON MATCH-UP</h2>
+
+<p>This certificate is proudly presented to</p>
+
+<h3 id="certName"></h3>
+
+<p>for successfully completing the</p>
+
+<h3>Particle Physics Challenge</h3>
+
+<p>
+<strong>Score:</strong>
+<span id="certScore"></span>/20
+</p>
+
+<p>
+<strong>Rank:</strong>
+<span id="certRank"></span>
+</p>
+
+<p>
+<strong>Date:</strong>
+<span id="certDate"></span>
+</p>
+
+</div>
+
+<button id="downloadCertBtn" class="btn">
+⬇ Download Certificate
+</button>
+
+<button id="backResultBtn2" class="btn">
+← Back
+</button>
+
+</section>
+
+</div>
+
+<!-- html2canvas for certificate download -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
